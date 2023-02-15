@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 const dimensions = Dimensions.get('window');
 const CardMenu = (props) => {
-    const {img, title} = props
+    const {img, title, navigation} = props
+    console.log(props)
     return (
-        <View style={style.container}>
+        <View style={style.container} >
         <Image source={{uri:img}} style={style.image}/>
             <Text style={style.title}>{title}</Text>
         </View>

@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, Dimensions, TouchableWithoutFeedback } from 'react-native';
 const dimensions = Dimensions.get('window');
 const CardMenu = (props) => {
-    const {img, title, navigation} = props
+    const {img, title, navigation, categorie} = props
     console.log(props)
     return (
-        <View style={style.container} >
-        <Image source={{uri:img}} style={style.image}/>
+        <TouchableWithoutFeedback style={style.container} onPress={() => navigation.navigate('business', {categorie: categorie})}>
+            <View>
+                <Image source={{uri:img}} style={style.image}/>
             <Text style={style.title}>{title}</Text>
-        </View>
+            </View>
+        
+        </TouchableWithoutFeedback>
     );
 };
 

@@ -11,19 +11,20 @@ const Stack = createStackNavigator();
 const HomeMenu = ({ navigation }) => {
     return (
     <View>
-          <CardMenu 
+        <View >
+<CardMenu 
                 img="https://www.elpais.com.co/files/article_main/uploads/2019/08/16/5d56c674cba56.jpeg"
-                title="A Domicilio" 
-                // onPress={}
+                title="A Domicilio"
+                categorie ="food"
+                navigation = {navigation}
                 
             />
-<Button
-      title="Go to Jane's profile"
-      onPress={() => navigation.navigate('business')}
-    />
+        </View>
             <CardMenu 
                 img="https://www.diegocoquillat.com/wp-content/uploads/2015/12/Los-espa%C3%B1oles-quieren-men%C3%BAs-cerrados-caseros-y-m%C3%A1s-econ%C3%B3micos-en-los-restaurantes.jpg"
-                title="Restaurantes" 
+                title="Restaurantes"
+                navigation = {navigation}
+                categorie="farmacia" 
             />
     </View>
           
